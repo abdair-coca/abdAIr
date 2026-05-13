@@ -1,0 +1,20 @@
+[project]
+name = "abdair"
+version = "0.1.0"
+description = "AI CLI Assistant powered by Groq"
+authors = [
+    { name = "Abdair" }
+]
+
+dependencies = [
+    "groq",
+    "python-dotenv",
+    "typer"
+]
+
+[project.scripts]
+abdair = "assistant.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

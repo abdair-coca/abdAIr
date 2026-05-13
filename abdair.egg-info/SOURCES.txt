@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+abdair.egg-info/PKG-INFO
+abdair.egg-info/SOURCES.txt
+abdair.egg-info/dependency_links.txt
+abdair.egg-info/entry_points.txt
+abdair.egg-info/requires.txt
+abdair.egg-info/top_level.txt
+assistant/__init__.py
+assistant/__main__.py
+assistant/chat.py
+assistant/cli.py
+assistant/commands.py
+assistant/config.py
+assistant/history.py
+assistant/main.py
+assistant/ui.py
