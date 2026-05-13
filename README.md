@@ -1,4 +1,4 @@
-# ABDair AI
+# abdaAIr Assistent
 
 A modern AI-powered CLI assistant built with Python and Groq.
 
