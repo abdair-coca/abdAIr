@@ -41,8 +41,8 @@ of another function without changing its code...
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/abdair-ai.git
-cd abdair-ai
+git clone https://github.com/abdair-coca/abdAIr.git
+cd abdAIr
 ```
 
 ---
@@ -89,7 +89,11 @@ MODEL=llama3-70b-8192
 Run the assistant from anywhere in your terminal:
 
 ```bash
-abdair-ai chat
+abdair chat
+```
+or
+```bash
+abdair 
 ```
 
 ---
