@@ -4,7 +4,7 @@ from assistant.config import MODELO, RED
 from assistant.chat import crear_cliente, chat
 from assistant.history import cargar_historial, resumir_historial
 from assistant.commands import manejar_comando
-from assistant.ui import mostrar_banner, mostrar_prompt
+from assistant.ui import mostrar_banner, mostrar_prompt, RESET
 
 
 def run_chat():
