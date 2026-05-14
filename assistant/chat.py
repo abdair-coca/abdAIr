@@ -13,7 +13,8 @@ def crear_cliente() -> Groq | None:
 
 
 def chat(client: Groq, historial: list, mensaje: str, tokens_totales: dict) -> bool:
-    historial.append({"role": "user", "content": mensaje})
+    if mensaje:
+        historial.append({"role": "user", "content": mensaje})
     texto_acumulado = ""
 
     print(f"\n{GREEN}{BOLD}Asistente:{RESET} ", end="", flush=True)

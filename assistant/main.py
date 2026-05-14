@@ -1,13 +1,13 @@
 import os
 import sys
-from assistant.config import MODELO, RED
+from assistant.config import MODELO, RED, SYSTEM_PROMPT
 from assistant.chat import crear_cliente, chat
 from assistant.history import cargar_historial, resumir_historial
 from assistant.commands import manejar_comando
 from assistant.ui import mostrar_banner, mostrar_prompt, RESET
 
 
-def run_chat():
+def run_chat(bachCommand: list):
     os.system("cls" if os.name == "nt" else "clear")
 
     mostrar_banner(MODELO)
@@ -16,12 +16,17 @@ def run_chat():
     if client is None:
         sys.exit(1)
 
-    historial = cargar_historial()
-    if not historial:
-        from assistant.config import SYSTEM_PROMPT
-        historial = [{"role": "system", "content": SYSTEM_PROMPT}]
-
     tokens_totales = {"entrada": 0, "salida": 0}
+    historial = cargar_historial()
+    if not historial and bachCommand:
+        historial = bachCommand
+        chat(client, historial, "", tokens_totales)
+    elif historial and bachCommand:
+        historial.insert(bachCommand)
+        chat(client, historial, "", tokens_totales)
+    elif not historial:
+        historial = [{'role': 'system', 'content':SYSTEM_PROMPT}]
+
 
     while True:
         try:
