@@ -7,7 +7,7 @@ load_dotenv()
 
 MODELO = os.getenv("MODEL")
 
-MAX_TOKENS = 300
+MAX_TOKENS = 2004
 MAX_REINTENTOS = 3
 
 SYSTEM_PROMPT = """Eres un asistente inteligente y amigable.

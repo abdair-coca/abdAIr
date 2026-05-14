@@ -28,22 +28,22 @@ def command_control(mode:str, routeFile:str):
     status, fileRead = ReadFile(routeFile)
     if mode == "--explicar" and status:
         systemPrompt = """
-        Eres un experto en Python. 
+        Eres un experto programador. 
         Analiza el código y responde en español.
         """
     elif mode == "--mejorar" and status:
         systemPrompt = """
-            Eres un experto en Python.
+            Eres un experto programador.
             Genera únicamente código válido.
             Genera y mejora el codigo completos.
             NO expliques Mucho, solo lo necesario.
             NO uses markdown.
-            NO escribas ```python.
-            SOLO devuelve código Python.s
+            NO escribas ```'lenguaje', ni al final ```.
+            SOLO devuelve código 
         """
     elif mode == "--bugs" and status:
         systemPrompt = """
-        Eres un experto en Python. 
+        Eres un experto programador. 
         Encuentra bugs y problemas potenciales en el código.
         """
     else:
